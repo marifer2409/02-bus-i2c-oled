@@ -21,13 +21,13 @@ void setup() {
 
     // TODO 1.1: Inicializar el bus I2C en los pines SDA y SCL del ESP32.
     Wire.begin(I2C_SDA_PIN, I2C_SCL_PIN);
-    /* ESCRIBE TU CÓDIGO AQUÍ */
+    
 
 
     // TODO 1.2: Configurar la velocidad del reloj a 400kHz (Modo Rápido).
 
     Wire.setClock(I2C_CLOCK_SPEED);
-    /* ESCRIBE TU CÓDIGO AQUÍ */
+
 
     Serial.println("[I2C] Bus configurado en SDA:GPIO21, SCL:GPIO22 a 400kHz.\n");
     Serial.println("--- INICIANDO BARRIDO DE DIRECCIONES (0x01 .. 0x7E) ---");
@@ -40,7 +40,7 @@ void setup() {
         // TODO 1.4: Tocar la puerta del periférico:
 
         Wire.beginTransmission(address);
-        byte de error: byte error = Wire.endTransmission();
+        byte error = Wire.endTransmission();
         
 
         // TODO 1.5: Evaluar la respuesta del periférico:
